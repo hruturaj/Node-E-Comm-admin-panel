@@ -2,7 +2,7 @@ import "./sidebar.css";
 import {
   LineStyle,
   Timeline,
-  TrendingUp,
+  // TrendingUp,
   PermIdentity,
   Storefront,
   AttachMoney,
@@ -12,6 +12,7 @@ import {
   ChatBubbleOutline,
   WorkOutline,
   Report,
+  Notes,
 } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 
@@ -23,19 +24,19 @@ export default function Sidebar() {
           <h3 className="sidebarTitle">Dashboard</h3>
           <ul className="sidebarList">
             <Link to="/" className="link">
-            <li className="sidebarListItem active">
-              <LineStyle className="sidebarIcon" />
-              Home
-            </li>
+              <li className="sidebarListItem active">
+                <LineStyle className="sidebarIcon" />
+                Home
+              </li>
             </Link>
             <li className="sidebarListItem">
               <Timeline className="sidebarIcon" />
               Analytics
             </li>
-            <li className="sidebarListItem">
+            {/* <li className="sidebarListItem">
               <TrendingUp className="sidebarIcon" />
               Sales
-            </li>
+            </li> */}
           </ul>
         </div>
         <div className="sidebarMenu">
@@ -53,6 +54,13 @@ export default function Sidebar() {
                 Products
               </li>
             </Link>
+            <Link to="/orders" className="link">
+              <li className="sidebarListItem">
+                <Notes className="sidebarIcon" />
+                Orders
+              </li>
+            </Link>
+
             <li className="sidebarListItem">
               <AttachMoney className="sidebarIcon" />
               Transactions
